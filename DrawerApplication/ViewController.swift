@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func openLeftDrawer(sender: AnyObject) {
+        DrawerDelegate.sharedInstance.revealDrawer(forDirection: .Left)
+    }
 
+    @IBAction func openRightDrawer(sender: AnyObject) {
+        DrawerDelegate.sharedInstance.revealDrawer(forDirection: .Right)
+    }
 }
 

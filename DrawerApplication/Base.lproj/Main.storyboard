@@ -1,13 +1,142 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="TZE-hL-c8t">
+            <objects>
+                <viewController storyboardIdentifier="RightDrawerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p10-Du-tdC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Psi-Ec-RqK"/>
+                        <viewControllerLayoutGuide type="bottom" id="vJE-eb-Gz0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7NI-F3-sFb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Drawer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI5-ag-9vF">
+                                <rect key="frame" x="349" y="277" width="202" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61960784310000006" green="0.59053415949999999" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XI5-ag-9vF" secondAttribute="trailing" constant="33" id="aDa-xb-zGu"/>
+                            <constraint firstAttribute="centerY" secondItem="XI5-ag-9vF" secondAttribute="centerY" constant="0.5" id="mhU-YT-1Yy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSC-ie-F9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="1329"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5F0-PA-Zbn">
+            <objects>
+                <viewController storyboardIdentifier="MainViewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4j9-JY-jgy" customClass="ViewController" customModule="DrawerApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qek-h3-Srf"/>
+                        <viewControllerLayoutGuide type="bottom" id="keC-g7-1JX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="An2-Me-O3O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHV-89-yAm">
+                                <rect key="frame" x="221" y="70" width="158" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5V-iw-EWV">
+                                <rect key="frame" x="16" y="285" width="132" height="30"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="9m4-Ua-Xfw"/>
+                                    <constraint firstAttribute="height" constant="30" id="sBA-jN-13q"/>
+                                </constraints>
+                                <state key="normal" title="Open Left Drawer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openLeftDrawer:" destination="4j9-JY-jgy" eventType="touchUpInside" id="rJ8-Hw-gSO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oob-pH-g02">
+                                <rect key="frame" x="443" y="285" width="141" height="30"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="OLN-q1-oTD"/>
+                                    <constraint firstAttribute="height" constant="30" id="eG2-5L-hFN"/>
+                                </constraints>
+                                <state key="normal" title="Open Right Drawer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openRightDrawer:" destination="4j9-JY-jgy" eventType="touchUpInside" id="QdE-HN-RJc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48627450979999998" green="0.96862745100000003" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tHV-89-yAm" firstAttribute="top" secondItem="qek-h3-Srf" secondAttribute="bottom" constant="50" id="6aW-oN-tI6"/>
+                            <constraint firstItem="Oob-pH-g02" firstAttribute="trailing" secondItem="An2-Me-O3O" secondAttribute="trailingMargin" id="8rZ-H9-u6s"/>
+                            <constraint firstItem="Oob-pH-g02" firstAttribute="height" secondItem="An2-Me-O3O" secondAttribute="height" id="G4c-f5-Awt"/>
+                            <constraint firstAttribute="centerX" secondItem="tHV-89-yAm" secondAttribute="centerX" id="QIn-fj-YVO"/>
+                            <constraint firstItem="m5V-iw-EWV" firstAttribute="leading" secondItem="An2-Me-O3O" secondAttribute="leadingMargin" id="fjw-ic-UJ6"/>
+                            <constraint firstAttribute="centerY" secondItem="Oob-pH-g02" secondAttribute="centerY" id="kEc-So-Dtq"/>
+                            <constraint firstAttribute="centerY" secondItem="m5V-iw-EWV" secondAttribute="centerY" id="nsM-xN-lVX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="G4c-f5-Awt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKm-Ab-j5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="1329"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QGH-9e-SgK">
+            <objects>
+                <viewController storyboardIdentifier="LeftDrawerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D8v-7n-XTK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gTK-Wn-mHD"/>
+                        <viewControllerLayoutGuide type="bottom" id="I30-5T-mrr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yGW-5t-ahC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left Drawer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqt-dI-bJh">
+                                <rect key="frame" x="66" y="277" width="179" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.77647058820000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cqt-dI-bJh" firstAttribute="leading" secondItem="yGW-5t-ahC" secondAttribute="leadingMargin" constant="50" id="acp-jE-XBi"/>
+                            <constraint firstAttribute="centerY" secondItem="cqt-dI-bJh" secondAttribute="centerY" constant="0.5" id="kbT-EN-vbq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVc-m4-euh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="1329"/>
+        </scene>
+        <!--Dynamics Drawer View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MSDynamicsDrawerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
